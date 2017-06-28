@@ -1,8 +1,12 @@
+node_modules
+
+.DS_Store
+
+dist
+
+*.log
 /nbproject/*
 .track
-.DS_Store
-*.log
-node_modules
 *.orig
 _deps/
 .idea
