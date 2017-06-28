@@ -1,1 +1,10 @@
-/nbproject/private/
+/nbproject/*
+.track
+.DS_Store
+*.log
+node_modules
+*.orig
+_deps/
+.idea
+_wip/
+pre-commit.sh
