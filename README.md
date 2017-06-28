@@ -17,6 +17,3 @@ For distribution folder run the following command and it will create a dist fold
 ```sh
 npm run build
 ```
-
-## License
-[MIT](LICENSE)
