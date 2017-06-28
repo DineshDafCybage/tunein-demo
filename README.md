@@ -1,20 +1,11 @@
-# Static Website Boilerplate
-
-Static website boilterplate built using Webpack. This boilterplate features following:
-
-- Webpack
-- ES6
-- Bootstrap
-- Font Awesome
-- Sass
-- Live reload using Browsersync
+# Tune In Demo
 
 ## Getting Started
 
 Clone the repo
 
 ```sh
-git clone https://github.com/binoy14/static-website-webpack-boilerplate.git
+git clone https://github.com/DineshDafCybage/tunein-demo.git
 ```
 
 Run script to start devlopment
