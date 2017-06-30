@@ -1,9 +1,5 @@
-body {
-	background-color: #607d8b;
-	font-family: arial, helvetica, sans-serif;
-	font-size: 14px;
-}
-
-.jumbotron {
-	background-color: #cfd8dc;
-}
+@import 'fonts';
+@import 'config';
+@import 'reset';
+@import 'global';
+@import 'module';

@@ -1,0 +1,109 @@
+//colors.
+$color-black: #000;
+$color-white: #fff;
+$color-cta: #36B4A7;
+
+//Font.
+$font-size-xxx-lg: 70px;
+$font-size-xx-lg: 50px;
+$font-size-x-lg: 40px;
+$font-size-md: 30px;
+$font-size-md-sm: 25px;
+$font-size-sm: 20px;
+$font-size-normal: 18px;
+$font-size-x-sm: 16px;
+$font-size-xx-sm: 15px;
+
+$font-weight-normal: 400;
+$font-stack: $font-weight-normal $font-size-normal "HelveticaNeue", Arial, sans-serif;
+
+$font-helvetica-medium: "HelveticaNeueMedium";
+$font-helvetica-bold: "HelveticaNeueBold";
+
+// Breakpoints and media queries.
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-sm-desktop: 900px;
+$breakpoint-desktop: 1200px;
+$breakpoint-lg-desktop: 1441px;
+
+@mixin mobile-up {
+  @media only screen and (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media only screen and (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin sm-desktop-up {
+  @media only screen and (min-width: $breakpoint-sm-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media only screen and (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin lg-desktop-up {
+  @media only screen and (min-width: $breakpoint-desktop + 1) {
+    @content;
+  }
+}
+
+@mixin xl-desktop-up {
+  @media only screen and (min-width: $breakpoint-lg-desktop) {
+    @content;
+  }
+}
+
+@mixin iphone-5-landscape {
+  @media only screen and (min-width: 350px) and (max-device-width: 568px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin iphone-5-portrait {
+  @media only screen and (max-width: 350px) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media only screen and (min-device-width: 480px) and (max-device-width: 736px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin ipad-landscape {
+  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    @content;
+  }
+}
+
+//CTA.
+@mixin default-cta {
+	color: $color-white;
+	background: $color-cta;
+	border: 1px solid #36B4A7;
+	border-radius: 100px;
+	display: inline-block;
+	font-family: HelveticaNeueBold;
+	line-height: 16px;
+	margin: 15px 0;
+	min-width: 300px;
+	padding: 16px 0;
+
+	@include mobile-up {
+		font-size: $font-size-sm;
+	}
+}
+
+$block-container: 100%;
+$block-max-width: 1600px;

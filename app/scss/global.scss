@@ -1,0 +1,55 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+	background: $color-white;
+	font: $font-stack;
+	line-height: 1;
+	margin: 0;
+	text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 10px 0;
+	
+	@include tablet-up {
+		margin: 20px 0;
+	}
+}
+
+.block {
+	margin: 0 auto;
+	max-width: $block-max-width;
+  padding: 60px 20px;
+	
+  @include sm-desktop-up {
+    padding: 120px 0;
+  }
+
+	&__title {
+		font-size: $font-size-xx-lg;
+		font-family: HelveticaNeueBold;
+		
+		@include sm-desktop-up {
+			font-size: $font-size-xx-lg;
+		}
+	}
+	
+	&__cta-container {
+		text-align: center;
+	}
+	
+	&__cta {
+		@include default-cta;
+	}
+	
+	&__cta-link {
+		color: $color-black;
+		display: block;
+		font-family: HelveticaNeueMedium;
+		font-size: $font-size-xx-sm;
+		
+		@include mobile-up {
+			font-size: $font-size-normal;
+		}
+	}
+}
