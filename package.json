@@ -43,6 +43,8 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.6.3",
-    "jquery": "^3.1.0"
+    "jquery": "^3.1.0",
+    "resolve-url-loader": "^2.1.0",
+    "smooth-scroll-to": "^0.0.9"
   }
 }
