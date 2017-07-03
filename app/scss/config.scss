@@ -1,26 +1,35 @@
 //colors.
 $color-black: #000;
 $color-white: #fff;
-$color-cta: #36B4A7;
+$color-cta: #36b4a7;
+$color-border: #d6d6d6;
+$color-copyright: #6a6a6a;
+$color-subscribe-list: #141720;
 
 //Font.
-$font-size-xxx-lg: 70px;
+$font-size-xxxx-lg: 70px;
+$font-size-xxx-lg: 60px;
 $font-size-xx-lg: 50px;
 $font-size-x-lg: 40px;
 $font-size-md: 30px;
 $font-size-md-sm: 25px;
+$font-size-md-x-sm: 22px;
 $font-size-sm: 20px;
 $font-size-normal: 18px;
 $font-size-x-sm: 16px;
 $font-size-xx-sm: 15px;
+$font-size-xxx-sm: 14px;
+$font-size-xxxx-sm: 13px;
+
+$font-helvetica-normal: 'HelveticaNeue';
+$font-helvetica-medium: 'HelveticaNeueMedium';
+$font-helvetica-bold: 'HelveticaNeueBold';
 
 $font-weight-normal: 400;
-$font-stack: $font-weight-normal $font-size-normal "HelveticaNeue", Arial, sans-serif;
-
-$font-helvetica-medium: "HelveticaNeueMedium";
-$font-helvetica-bold: "HelveticaNeueBold";
+$font-stack: $font-weight-normal $font-size-normal $font-helvetica-normal, Arial, sans-serif;
 
 // Breakpoints and media queries.
+$breakpoint-mobile-portrait: 350px;
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
 $breakpoint-sm-desktop: 900px;
@@ -64,25 +73,25 @@ $breakpoint-lg-desktop: 1441px;
 }
 
 @mixin iphone-5-landscape {
-  @media only screen and (min-width: 350px) and (max-device-width: 568px) and (orientation: landscape) {
+  @media only screen and (min-width: $breakpoint-mobile-portrait) and (max-device-width: 568px) and (orientation: landscape) {
     @content;
   }
 }
 
 @mixin iphone-5-portrait {
-  @media only screen and (max-width: 350px) {
+  @media only screen and (max-width: $breakpoint-mobile-portrait) {
     @content;
   }
 }
 
 @mixin mobile-landscape {
-  @media only screen and (min-device-width: 480px) and (max-device-width: 736px) and (orientation: landscape) {
+  @media only screen and (min-device-width: $breakpoint-mobile) and (max-device-width: 736px) and (orientation: landscape) {
     @content;
   }
 }
 
 @mixin ipad-landscape {
-  @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  @media only screen and (min-width: $breakpoint-tablet) and (max-width: 1024px) and (orientation: landscape) {
     @content;
   }
 }
@@ -98,12 +107,28 @@ $breakpoint-lg-desktop: 1441px;
 	line-height: 16px;
 	margin: 15px 0;
 	min-width: 300px;
-	padding: 16px 0;
+	padding: 15px 0;
 
 	@include mobile-up {
 		font-size: $font-size-sm;
 	}
 }
 
+@mixin clear {
+	clear: both;
+	content: '';
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+@mixin clear-fix {
+  &::after {
+		@include clear;
+	}
+}
+
 $block-container: 100%;
 $block-max-width: 1600px;
+$block-spacing-60: 60px;
+$block-spacing-40: 40px;
