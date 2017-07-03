@@ -77,6 +77,7 @@
 		}
 
 	  &--hero {
+      font-family: HelveticaNeueBold; //DD Changes
 		  font-size: $font-size-x-lg;
 		  margin-bottom: $block-spacing-40;
 		
@@ -108,8 +109,12 @@
 		}
 	}
 	
-	&__hero-logo {
-		width: 85px;
+	&__hero-logo { //DD Changes
+		width: 86px;
+    
+    @include sm-desktop-up {
+      width: 167px;
+    }
 	}
 	
 	&__hero-content {
@@ -155,6 +160,24 @@
 				font-family: HelveticaNeueMedium;
 			}
 		}
+    
+    p:last-child { //DD changes
+      @include sm-desktop-up {
+        font-size: $font-size-md-x-sm;
+      }
+      
+      @include desktop-up {
+        font-size: $font-size-md-x-sm;
+      }
+      
+      @include lg-desktop-up {
+        font-size: $font-size-md-x-sm;
+      }
+      
+      @include xl-desktop-up {
+        font-size: $font-size-md-x-sm;
+      }
+    }
 	}
 	
 	&__hero-bold-subtitle {
@@ -371,6 +394,7 @@
 		
 		li {
 			.playlist-thumb-des {
+        color: $color-playlist-title; //DD Changes
 				overflow: hidden;
 				padding: 5px 10px 5px 0;
 				text-overflow: ellipsis;
@@ -406,6 +430,7 @@
 		.music-rank {
 			background: #d8d8d8;
 			border-radius: 100px;
+      color: $color-playlist-title; //DD Changes
 			margin-top: 20px; 
 			padding: 5px 10px;
 		}
@@ -714,6 +739,7 @@
 		}
 	 
 	  img {
+      height: 23px; //DD Changes
 		  width: 98px;
 		  
 		  @include mobile-up {
