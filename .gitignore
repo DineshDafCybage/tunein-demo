@@ -1,14 +1,4 @@
 node_modules
-
 .DS_Store
-
 dist
-
 *.log
-/nbproject/*
-.track
-*.orig
-_deps/
-.idea
-_wip/
-pre-commit.sh

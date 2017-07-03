@@ -1,11 +1,20 @@
-# Tune In Demo
+# Static Website Boilerplate
+
+Static website boilterplate built using Webpack. This boilterplate features following:
+
+- Webpack
+- ES6
+- Bootstrap
+- Font Awesome
+- Sass
+- Live reload using Browsersync
 
 ## Getting Started
 
 Clone the repo
 
 ```sh
-git clone https://github.com/DineshDafCybage/tunein-demo.git
+git clone https://github.com/binoy14/static-website-webpack-boilerplate.git
 ```
 
 Run script to start devlopment
@@ -17,3 +26,6 @@ For distribution folder run the following command and it will create a dist fold
 ```sh
 npm run build
 ```
+
+## License
+[MIT](LICENSE)

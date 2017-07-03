@@ -4,13 +4,14 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 var webpack = require('webpack');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
 	context: path.resolve('./app'),
 	entry: './js/index.js',
 	output: {
 		path: path.resolve('./dist/'),
-		filename: 'js/bundle.js',
+		filename: 'js/main.min.js',
 		publicPath: '/'
 	},
 	module: {
@@ -20,17 +21,14 @@ module.exports = {
 			loader: 'babel',
 			exclude: /node_modules/,
 			query: {
-				presets: ['es2015']
+				presets: ['es2015', 'stage-0']
 			}
 		},{
 			test: /\.html$/,
 			loader: 'html'
 		},{
-			test: /\.scss$/,
-			loaders: ["style", "css", "sass"]
-		},{
-			test: /\.css$/,
-			loaders: ["style", "css"]
+			test: /\.(scss|css)$/,
+			loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
 		},{
 			test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 			loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]"
@@ -44,13 +42,14 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin(['dist']),
-		new HtmlWebpackPlugin({
-			template: './index.html'
-		}),
-		new webpack.ProvidePlugin({
+		// new HtmlWebpackPlugin({
+		// 	template: './index.html'
+		// }),
+		/*new webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery',
-		}),
+		}),*/
+		new ExtractTextPlugin("./css/styles.css"),
 		new BrowserSyncPlugin({
 			server: {
 				baseDir: ['dist']
@@ -60,16 +59,10 @@ module.exports = {
 			open: false
 		}),
 		new CopyWebpackPlugin([{
-			from: './manifest.json'
-		},{
-			from: './manifest.webapp'
-		},{
-			from: './robots.txt'
-		},{
-			from: './favicon.ico'
-		},{
 			from: './img/**/*',
 			to: './'
+		},{
+			from: './*.html'
 		}])
 	]
 }
