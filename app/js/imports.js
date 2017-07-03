@@ -1,4 +1,5 @@
-import "bootstrap/dist/js/bootstrap.js";
-import "bootstrap/dist/css/bootstrap.css";
+import "../js/vendor/lory.js";
+import "../js/custom.js";
+
 import "../scss/style.scss";
-import "font-awesome/css/font-awesome.css";
+import "../scss/slider.css";

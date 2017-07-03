@@ -1,66 +1,280 @@
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="Static website boilerplate using webpack and bootstrap">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Static website boilerplate using webpack and bootstrap">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title>Static Website Boilerplate for Ampush</title>
-
-		<!-- Disable tap highlight on IE -->
-		<meta name="msapplication-tap-highlight" content="no">
-
-		<!-- Web Application Manifest -->
-		<link rel="manifest" href="manifest.json">
-
-		<!-- Add to homescreen for Chrome on Android -->
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="application-name" content="Static Website Boilerplate">
-		<link rel="icon" sizes="192x192" href="/img/chrome-touch-icon-192x192.png">
-
-		<!-- Add to homescreen for Safari on iOS -->
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta name="apple-mobile-web-app-title" content="Static Website Boilerplate">
-		<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-
-		<!-- Tile icon for Win8 (144x144 + tile color) -->
-		<meta name="msapplication-TileImage" content="/img/ms-touch-icon-144x144-precomposed.png">
-		<meta name="msapplication-TileColor" content="#263238">
-
-		<!-- Color the status bar on mobile devices -->
-		<meta name="theme-color" content="#263238">
-	</head>
+    <title>TuneIn - Sports</title>
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
 	<body>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-			      <span class="sr-only">Toggle navigation</span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			      <span class="icon-bar"></span>
-			    </button>
-			    <a class="navbar-brand" href="#">Website Boilterplate</a>
-			  </div>
-
-			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    <ul class="nav navbar-nav">
-			      <li class="active"><a href="#about">About <span class="sr-only">(current)</span></a></li>
-			      <li><a href="#contact">Contact</a></li>
-			    </ul>
-			  </div><!-- /.navbar-collapse -->
-			</div><!-- /.container-fluid -->
-		</nav>
-		<div class="container-fluid">
-			<div class="raw">
-				<div class="">
-        	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-        </div>
+		<section class="block block--full-width">
+			<div class="block__hero-container">
+				<div class="block__hero-image">
+					<div class="block__hero-content">
+						<h1 class="block__hero-logo"><img src="img/Logo-White.png" alt="TuneIn Logo"></h1>
+						<h2 class="block__title__title block__title--hero">Never miss another game.</h2>
+						<div class="block__hero-subtitle">
+							<p class="block__hero-bold-subtitle">MLB, NFL, NBA, NHL &amp; more</p>
+							<p>Get live play-by-play from every game, all season long.</p>
+						</div>
+						<div class="block__cta-container">
+							<a class="block__cta" href="#.">Listen Free For 30 Days</a>
+							<a class="block__cta-link block__cta-link--hero" href="#.">Cancel anytime.</a>
+						</div>
+					</div>
+				</div>
 			</div>
-		</div>
+			<div class="block__scroll-down">
+				<div class="block__scroll-btn">
+				  <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<title>ArrowDown-Tablet</title>
+						<desc>Created with Sketch.</desc>
+						<defs></defs>
+						<g id="HDMock-Sports-v3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="Template-Sports-Boy-Tablet-Portrait-v4" transform="translate(-354.000000, -439.000000)">
+										<g id="ArrowDown-Tablet" transform="translate(356.000000, 441.000000)">
+												<circle id="Oval" stroke="#FFFFFF" stroke-width="3" fill="#000000" cx="28" cy="28" r="28"></circle>
+												<polygon id="Page-1" fill="#FFFFFF" points="41.5943504 21 27.9996629 34.2577252 14.4063237 21 13 22.3714661 27.9996629 37 43 22.3714661"></polygon>
+										</g>
+								</g>
+						</g>
+					</svg>
+				</div>
+			</div>
+		</section>
+		<section class="block block__whatson-tunein">
+			<div class="block__whatson-container clearfix">
+				<div class="block__whatson-title-container">
+					<h2 class="block__title block__title--align-center">What’s on TuneIn?</h2>
+					<p class="block__title-subtext">Live play-by-play from your favorite team, whether they’re home or away. And plenty of sports talk radio in-between.</p>
+				</div>
+				<div class="block__whatson-carousel">
+					<ul class="block__carousel-container clearfix">
+						<li>
+							<a href="#.">
+								<img src="img/radio-stations/college-basketball.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#.">
+								<img src="img/radio-stations/college-football.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#.">
+								<img src="img/radio-stations/ESPN.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#.">
+								<img src="img/radio-stations/MLB.jpg">
+							</a>
+						</li>
+						<li>
+							<a href="#.">
+								<img src="img/radio-stations/NBA.jpg">
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/radio-stations/NBC-Sports.jpg">
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/radio-stations/NFL.jpg">
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/radio-stations/NHL.jpg">
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="img/radio-stations/WNBA.jpg">
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="block__games-playing-container">
+					<h3 class="block__games-playing-title">Games playing now</h3>
+					<div class="block__games-music-list clearfix">
+						<ul>
+							<li class="block__games-music clearfix">
+								<picture class="playlist-thumb"><img src="img/matchup1.jpg"></picture>
+								<p class="playlist-thumb-des">Miami Marlins</p>
+							</li>
+							<li class="block__games-music clearfix">
+								<picture class="playlist-thumb "><img src="img/matchup1.jpg"></picture>
+								<p class="playlist-thumb-des">Washington Nationals</p>
+							</li>
+						</ul>
+						<div class="music-rank-content">
+							<div class="music-rank">6th</div>
+						</div>
+						<div class="music-number">
+							<div class="music-count">4</div>
+							<div class="music-count">8</div>
+						</div>
+						<div class="music-play">
+							<img src="img/play-btn.svg">
+						</div>
+					</div>
+					<div class="block__games-music-list clearfix">
+						<ul>
+							<li class="block__games-music clearfix">
+								<picture class="playlist-thumb"><img src="img/matchup1.jpg"></picture>
+								<p class="playlist-thumb-des">Miami Marlins</p>
+							</li>
+							<li class="block__games-music clearfix">
+								<picture class="playlist-thumb "><img src="img/matchup1.jpg"></picture>
+								<p class="playlist-thumb-des">Washington Nationals</p>
+							</li>
+						</ul>
+						<div class="music-rank-content">
+							<div class="music-rank">6th</div>
+						</div>
+						<div class="music-number">
+							<div class="music-count">4</div>
+							<div class="music-count">8</div>
+						</div>
+						<div class="music-play">
+							<img src="img/play-btn.svg">
+						</div>
+					</div>
+					<div class="block__games-music-list clearfix">
+						<ul>
+							<li class="block__games-music clearfix">
+								<picture class="playlist-thumb"><img src="img/matchup1.jpg"></picture>
+								<p class="playlist-thumb-des">Miami Marlins</p>
+							</li>
+							<li class="block__games-music clearfix">
+								<picture class="playlist-thumb "><img src="img/matchup1.jpg"></picture>
+								<p class="playlist-thumb-des">Washington Nationals</p>
+							</li>
+						</ul>
+						<div class="music-rank-content">
+							<div class="music-rank">6th</div>
+						</div>
+						<div class="music-number">
+							<div class="music-count">4</div>
+							<div class="music-count">8</div>
+						</div>
+						<div class="music-play">
+							<img src="img/play-btn.svg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="block block__subscribe">
+				<h3 class="block__title-secondary">Go Premium</h3>
+				<p class="block__title-text">Start listening to every game live.</p>
+				<div class="block__subscribe-container">
+					<div class="block__subscribe-copy">
+						<h4 class="block__subscribe-heading">Premium</h4>
+						<ul class="block__subscribe-list">
+							<li>Live NFL, MLB, NBA games</li>
+							<li>Unlimited Audiobooks</li>
+							<li>Commercial-Free Music</li>
+							<li>100,000 Radio Stations</li>
+							<li>5.7 M Podcasts</li>
+						</ul>
+						<div class="block__cta-container">
+							<a class="block__cta block__cta--subscribe" href="#.">Listen Free For 30 Days</a>
+							<a class="block__cta-link" href="#.">Cancel anytime.</a>
+						</div>
+					</div>
+			  </div>
+		</section>
+		<section class="block block__devices">
+			<h3 class="block__title-secondary">Listen Live, Anywhere</h3>
+			<p class="block__title-text">Enjoy original, live, and on demand content on hundreds of devices.</p>
+			<picture class="block__image-container">
+				<img class="block__devices-img" src="img/devices.png" alt="Devices">
+			</picture>
+			<div class="block__devices-container block__devices-container--mobile"> 	
+			  <ul>
+				  <li>Iphone</li>
+					<li>Android Phone</li>
+					<li>Window Phone</li>
+					<li>Blackberry</li>
+					<li>Ipad</li>
+					<li>Android Tablet</li>
+				</ul>
+				<ul>
+					<li>Amazon Kindle</li>
+					<li>Samsung Smart TV</li>
+					<li>Panasonic Viera TV</li>
+					<li>Roku</li>
+					<li>Sonos</li>
+					<li>Xbox One</li>
+				</ul>
+			</div>
+			<div class="block__devices-container block__devices-container--desktop">
+				<ul>
+					<li>Iphone</li>
+					<li>Android Phone</li>
+					<li>Window Phone</li>
+					<li>Blackberry</li>
+				</ul>
+				<ul>
+					<li>Ipad</li>
+					<li>Android Tablet</li>
+					<li>Amazon Kindle</li>
+				</ul>
+				<ul>
+					<li>Samsung Smart TV</li>
+					<li>Panasonic Viera TV</li>
+					<li>Roku</li>
+					<li>Sonos</li>
+					<li>Xbox One</li>
+				</ul>
+			</div>
+		 </section>
+		 <section  class="block">
+			 <div class="block__testimonials">
+				 <div class="block__testimonials-image">
+					 <picture>
+						 <img src="img/iphone-android.jpg" alt="iPhone Android Phone">
+					 </picture>
+				 </div>
+				 <div class="block__testimonials-container">
+					 <picture class="block__testimonials-ratings">
+						 <img src="img/ratings.svg" alt="Testimonial Ratings">
+					 </picture>
+					 <h3 class="block__testimonials-heading">Best Radio Ever</h3>
+					 <p class="block__testimonials-copy">“As a die hard New England sports fan the TuneIn Radio App is my connection to all sports Boston. I listen to all New England Patriots , Boston Red Sox , Boston Bruins Hockey and Celtics. All for $9.99 a month. Way cheaper than the NFL, NBA, MLB and NHL app. Check it out and add all four of those apps up. TuneIn is clean solid quality audio. It's easy on my download limits and iPhone battery. I rate this TuneIn App #1 in
+	all my iPhone Apps.”</p>
+					 <p class="block__testimonials-author">- JamieInNewHampshire</p>
+				 </div>
+      </div>
+	  </section>
+		<section class="block block--full-width">
+		  <div class="block__try-today">
+				<div class="block__try-today-copy">
+					<h3 class="block__try-today-heading">Try TuneIn Today</h3>
+					<div class="block__cta-container">
+						<a class="block__cta" href="#.">Listen Free For 30 Days</a>
+						<a class="block__cta-link block__cta-link--try-today" href="#.">Cancel anytime.</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="block block--full-width block__footer">
+		  <ul class="block__footer-list">
+			  <li><a href="">Contact Us</a></li>
+			  <li><a href="">Privacy</a></li>
+			  <li><a href="">Term of Service</a></li>
+			</ul>
+			<picture class="block__footer-logo">
+			  <img src="img/logo-white.png" alt="TuneIn Logo">
+			</picture>
+			<p class="block__footer-copyright">&copy; 2017 TuneIn, Inc. All rights reserved</p>
+		</footer>
+    <script type="text/javascript" src="js/main.min.js"></script>
 	</body>
 </html>
