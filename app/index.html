@@ -1,104 +1,102 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Static website boilerplate using webpack and bootstrap">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>TuneIn - Sports</title>
-    <link href="css/styles.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		<!-- Ampush Facebook & Ampush Tracker Pixel Code -->
+		<script>
+			// Facebook Pixel Code
+			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+			n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+			t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+			document,'script','https://connect.facebook.net/en_US/fbevents.js');
+			fbq('init', '1312645832154081', {
+			});
+			fbq('track', 'PageView');
+			// Ampush Tracker Pixel Code
+			!function(){var t=document.createElement("script");t.setAttribute("type","text/javascript");
+			t.setAttribute("src","//files.ampush.io/js/tracker.js?"+(new Date).valueOf());
+			"undefined"!=typeof t&&document.getElementsByTagName("head")[0].appendChild(t);
+			t.onload=function(){ampt.init("tunein", "ce3e09cd-055b-414e-8849-5ae2916714cf"),ampt.pageview()}}();
+		</script>
+		<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1312645832154081&ev=PageView&noscript=1"
+		/></noscript>
+		<!-- DO NOT MODIFY -->
+		<!-- End Ampush Facebook & Ampush Tracker Pixel Code -->
   </head>
 	<body>
 		<section class="block block--full-width">
-			<div class="block__hero-container" id="scroll-from">
+			<div class="block__hero-container">
 				<div class="block__hero-image">
 					<div class="block__hero-content">
-						<h1 class="block__hero-logo"><img src="img/Logo-White.png" alt="TuneIn Logo"></h1>
-						<h2 class="block__title__title block__title--hero">Never miss another game.</h2>
+						<h1 class="block__hero-logo"><img src="img/logo-white.png" alt="TuneIn Logo"></h1>
+						<h2 class="block__title block__title--hero">Never miss another game.</h2>
 						<div class="block__hero-subtitle">
-							<p class="block__hero-bold-subtitle">MLB, NFL, NBA, NHL &amp; More</p> <!-- DD changes -->
+							<p class="block__hero-bold-subtitle">MLB, NFL, NBA, NHL &amp; More</p>
 							<p>Get live play-by-play from every game, all season long.</p>
 						</div>
 						<div class="block__cta-container">
-							<a class="block__cta" href="#.">Listen Free For 30 Days</a>
-							<a class="block__cta-link block__cta-link--hero" href="#.">Cancel anytime.</a>
+							<a class="block__cta js-tracker js-hero-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
+							<a class="block__cta-link block__cta-link--hero js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="block__scroll-down">
-				<div class="block__scroll-btn" id="scroll-btn">
-				  <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-						<title>ArrowDown-Tablet</title>
-						<desc>Created with Sketch.</desc>
-						<defs></defs>
-						<g id="HDMock-Sports-v3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-								<g id="Template-Sports-Boy-Tablet-Portrait-v4" transform="translate(-354.000000, -439.000000)">
-										<g id="ArrowDown-Tablet" transform="translate(356.000000, 441.000000)">
-												<circle id="Oval" stroke="#FFFFFF" stroke-width="3" fill="#000000" cx="28" cy="28" r="28"></circle>
-												<polygon id="Page-1" fill="#FFFFFF" points="41.5943504 21 27.9996629 34.2577252 14.4063237 21 13 22.3714661 27.9996629 37 43 22.3714661"></polygon>
-										</g>
-								</g>
-						</g>
-					</svg>
+				<div class="block__scroll-btn">
+					<a href="#whatson-tunein">				
+					  <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<title>ArrowDown-Tablet</title>
+							<desc>Created with Sketch.</desc>
+							<defs></defs>
+							<g id="HDMock-Sports-v3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<g id="Template-Sports-Boy-Tablet-Portrait-v4" transform="translate(-354.000000, -439.000000)">
+											<g id="ArrowDown-Tablet" transform="translate(356.000000, 441.000000)">
+													<circle id="Oval" stroke="#FFFFFF" stroke-width="3" fill="#000000" cx="28" cy="28" r="28"></circle>
+													<polygon id="Page-1" fill="#FFFFFF" points="41.5943504 21 27.9996629 34.2577252 14.4063237 21 13 22.3714661 27.9996629 37 43 22.3714661"></polygon>
+											</g>
+									</g>
+							</g>
+						</svg>
+					</a>
 				</div>
 			</div>
 		</section>
-		<section class="block block__whatson-tunein" id="whatson-tunein">
-			<div class="block__whatson-container clearfix">
+		<section class="block block__whatson-tunein">
+			<div class="block__whatson-container clearfix" id="whatson-tunein">
 				<div class="block__whatson-title-container">
 					<h2 class="block__title block__title--align-center">What’s on TuneIn?</h2>
 					<p class="block__title-subtext">Live play-by-play from your favorite team, whether they’re home or away. And plenty of sports talk radio in-between.</p>
 				</div>
-				<div class="block__whatson-carousel">
-					<ul class="block__carousel-container clearfix">
-						<li> <!-- DD Changes -->
-							<a>
-								<img src="img/radio-stations/college-football.jpg">
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/radio-stations/MLB.jpg">
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/radio-stations/college-basketball.jpg">
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/radio-stations/NFL.jpg">
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/radio-stations/ESPN.jpg">
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/radio-stations/NBA.jpg">
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/radio-stations/NBC-Sports.jpg">
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/radio-stations/WNBA.jpg">
-							</a>
-						</li>
-						<li>
-							<a>
-								<img src="img/radio-stations/NHL.jpg">
-							</a>
-						</li>
-					</ul>
+				<div class="block__slider js_multislides block__multislides">
+					<div class="frame js_frame">
+							<ul class="slides js_slides">
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/college-football.jpg" /></a></li>
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/MLB.jpg" /></a></li>
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/college-basketball.jpg" /></a></li>
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/NFL.jpg" /></a></li>
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/ESPN.jpg" /></a></li>
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/NBA.jpg" /></a></li>
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/NBC-Sports.jpg" /></a></li>
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/WNBA.jpg" /></a></li>
+									<li class="js_slide"><a href="#go-premium"><img src="img/radio-stations/NHL.jpg" /></a></li>
+							</ul>
+					</div>
+
+					<span class="js_prev prev">
+							<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" style="enable-background:new -12 -12 75 75;" version="1.1" viewBox="-12 -12 75 75" xml:space="preserve"><g><polygon fill="#ffffff" points="30.8,45.7 9.1,24 30.8,2.3 32.2,3.7 11.9,24 32.2,44.3  "/></g></svg>
+					</span>
+
+					<span class="js_next next">
+							<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" style="enable-background:new -12 -12 75 75;" version="1.1" viewBox="-12 -12 75 75" xml:space="preserve"><g><polygon fill="#ffffff" points="11.8,45.7 10.4,44.3 30.8,24 10.4,3.7 11.8,2.3 33.5,24  "/></g></svg>
+					</span>
 				</div>
+				
 				<div class="block__games-playing-container">
 					<h3 class="block__games-playing-title">Games playing now</h3>
 					<div class="block__games-music-list clearfix">
@@ -113,14 +111,14 @@
 							</li>
 						</ul>
 						<div class="music-rank-content">
-							<div class="music-rank">6th</div>
+							<div class="music-rank up-arrow" ><span>6th</span></div>
 						</div>
 						<div class="music-number">
 							<div class="music-count">4</div>
 							<div class="music-count">8</div>
 						</div>
 						<div class="music-play">
-							<img src="img/play-btn.svg">
+							<a href="#go-premium"><img src="img/play-btn.svg"></a>
 						</div>
 					</div>
 					<div class="block__games-music-list clearfix">
@@ -135,14 +133,14 @@
 							</li>
 						</ul>
 						<div class="music-rank-content">
-							<div class="music-rank">6th</div>
+							<div class="music-rank up-arrow" ><span>6th</span></div>
 						</div>
 						<div class="music-number">
 							<div class="music-count">4</div>
 							<div class="music-count">8</div>
 						</div>
 						<div class="music-play">
-							<img src="img/play-btn.svg">
+							<a href="#go-premium"><img src="img/play-btn.svg"></a>
 						</div>
 					</div>
 					<div class="block__games-music-list clearfix">
@@ -157,20 +155,20 @@
 							</li>
 						</ul>
 						<div class="music-rank-content">
-							<div class="music-rank">6th</div>
+							<div class="music-rank up-arrow" ><span>6th</span></div>
 						</div>
 						<div class="music-number">
 							<div class="music-count">4</div>
 							<div class="music-count">8</div>
 						</div>
 						<div class="music-play">
-							<img src="img/play-btn.svg">
+							<a href="#go-premium"><img src="img/play-btn.svg"></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="block block__subscribe">
+		<section class="block block__subscribe" id="go-premium">
 				<h3 class="block__title-secondary">Go Premium</h3>
 				<p class="block__title-text">Start listening to every game live.</p>
 				<div class="block__subscribe-container">
@@ -184,8 +182,8 @@
 							<li>5.7 M Podcasts</li>
 						</ul>
 						<div class="block__cta-container">
-							<a class="block__cta block__cta--subscribe" href="#.">Listen Free For 30 Days</a>
-							<a class="block__cta-link" href="#.">Cancel anytime.</a>
+							<a class="block__cta block__cta--subscribe js-tracker js-landing-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
+							<a class="block__cta-link--go-premium js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
 						</div>
 					</div>
 			  </div>
@@ -196,42 +194,22 @@
 			<picture class="block__image-container">
 				<img class="block__devices-img" src="img/devices.png" alt="Devices">
 			</picture>
-			<div class="block__devices-container block__devices-container--mobile"> 	
-			  <ul>
-				  <li>Iphone</li>
-					<li>Android Phone</li>
-					<li>Window Phone</li>
-					<li>Blackberry</li>
-					<li>Ipad</li>
-					<li>Android Tablet</li>
-				</ul>
-				<ul>
-					<li>Amazon Kindle</li>
-					<li>Samsung Smart TV</li>
-					<li>Panasonic Viera TV</li>
-					<li>Roku</li>
-					<li>Sonos</li>
-					<li>Xbox One</li>
-				</ul>
-			</div>
-			<div class="block__devices-container block__devices-container--desktop">
+			<div class="block__devices-container">
 				<ul>
 					<li>Iphone</li>
 					<li>Android Phone</li>
 					<li>Window Phone</li>
-					<li>Blackberry</li>
-				</ul>
-				<ul>
+					<li class="remove-line">Blackberry</li>
+					<li class="nl remove-line"></li>
 					<li>Ipad</li>
 					<li>Android Tablet</li>
-					<li>Amazon Kindle</li>
-				</ul>
-				<ul>
+					<li class="remove-line">Amazon Kindle</li>
+					<li class="nl remove-line"></li>
 					<li>Samsung Smart TV</li>
 					<li>Panasonic Viera TV</li>
 					<li>Roku</li>
 					<li>Sonos</li>
-					<li>Xbox One</li>
+					<li class="remove-line">Xbox One</li>
 				</ul>
 			</div>
 		 </section>
@@ -258,8 +236,8 @@
 				<div class="block__try-today-copy">
 					<h3 class="block__try-today-heading">Try TuneIn Today</h3>
 					<div class="block__cta-container">
-						<a class="block__cta" href="#.">Listen Free For 30 Days</a>
-						<a class="block__cta-link block__cta-link--try-today" href="#.">Cancel anytime.</a>
+						<a class="block__cta js-tracker js-footer-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
+						<a class="block__cta-link block__cta-link--try-today js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
 					</div>
 				</div>
 			</div>
@@ -275,6 +253,6 @@
 			</picture>
 			<p class="block__footer-copyright">&copy; 2017 TuneIn, Inc. All rights reserved</p>
 		</footer>
-    <script type="text/javascript" src="js/main.min.js"></script>
+		<script src="js/main.min.js"></script>
 	</body>
 </html>

@@ -21,18 +21,18 @@
 		
 		&--subscribe {
 			@include iphone-5-portrait {
-				min-width: 235px;
+				width: 235px;
 			}
 		}
 	}
-
+	
 	&__title-secondary {
 		font-family: $font-helvetica-bold;
 		font-size: $font-size-md;
 		margin: 0 0 10px;
 
 		@include mobile-up {
-			font-size:	$font-size-x-lg;
+			font-size:	$font-size-x-lg;		 
 		}
 
 	  @include sm-desktop-up {
@@ -61,46 +61,19 @@
 	&__hero-container {
     color: $color-white;	
 	}
-	
-	&__hero-logo {
-		@include mobile-up {
-			margin: 0 auto;
-		}
-	}
-	
-	&__title {
-		font-size: $font-size-xx-lg;
-		font-family: HelveticaNeueBold;
-		
-		@include sm-desktop-up {
-			font-size: $font-size-xx-lg;
-		}
-
-	  &--hero {
-      font-family: HelveticaNeueBold; //DD Changes
-		  font-size: $font-size-x-lg;
-		  margin-bottom: $block-spacing-40;
-		
-			@include mobile-up {
-				margin-bottom: 20px;
-			}
-
-			@include sm-desktop-up {
-				font-size: $font-size-xxxx-lg;
-			}
-		}
-	}
 		
 	&__hero-image {
-		background: url('../img/sports-hero.jpg') no-repeat center 0;
+		background: url('../img/sports-hero-mobile.jpg') no-repeat center 0;
 		background-size: contain;
+		height: 440px;
 		
-		@include mobile-up {
-			background-size: cover;
-			height: 360px;
+		@include iphone-5-portrait {
+			height: 400px;
 		}
 		
-		@include sm-desktop-up {
+		@include mobile-up {
+			background: url('../img/sports-hero.jpg') no-repeat center 0;
+			background-size: cover;
 			height: 470px;
 		}
 		
@@ -109,23 +82,57 @@
 		}
 	}
 	
-	&__hero-logo { //DD Changes
-		width: 86px;
-    
-    @include sm-desktop-up {
-      width: 167px;
-    }
+	&__hero-logo {
+		height: 20px;
+		width: 85px;
+		
+		@include mobile-up {
+			height: 27px;
+			margin: 0 auto;
+			width: 121px;
+		}
+		
+		@include lg-desktop-up {
+			height: 37px;
+			width: 167px;
+		}
+	}
+	
+	&__title {
+		font-family: HelveticaNeueBold;
+		font-size: $font-size-xx-lg;
+		
+		@include sm-desktop-up {
+			font-size: $font-size-xx-lg;
+		}
+
+	  &--hero {
+		  font-size: $font-size-x-lg;
+		  margin-bottom: $block-spacing-40;
+		
+			@include mobile-up {
+				margin-bottom: 20px;
+			}
+			
+			@include tablet-up {
+				font-size: $font-size-xx-lg;
+			}
+
+			@include sm-desktop-up {
+				font-size: $font-size-xxxx-lg;
+			}
+		}
 	}
 	
 	&__hero-content {
-		padding: 35px 20px 0;
+		padding: 65px 25px 0;
 		
 		@include iphone-5-portrait {
-			padding: 10px 10px 0;
+			padding: 35px 10px 0;
 		}
 		
 		@include mobile-up {
-			max-width: 340px;
+			max-width: 360px;
 			text-align: center;
 		}
 		
@@ -151,46 +158,34 @@
 	&__hero-subtitle {
 		font-size: $font-size-normal;
 		
+		@include sm-desktop-up {
+			font-size: $font-size-md-x-sm;
+		}
+		
 		@include xl-desktop-up {
 			font-size: $font-size-sm;
 		}
 		
-		p {
+		p:last-child {
+				font-family: HelveticaNeue;
+			
 			@include mobile-up {
 				font-family: HelveticaNeueMedium;
 			}
 		}
-    
-    p:last-child { //DD changes
-      @include sm-desktop-up {
-        font-size: $font-size-md-x-sm;
-      }
-      
-      @include desktop-up {
-        font-size: $font-size-md-x-sm;
-      }
-      
-      @include lg-desktop-up {
-        font-size: $font-size-md-x-sm;
-      }
-      
-      @include xl-desktop-up {
-        font-size: $font-size-md-x-sm;
-      }
-    }
 	}
 	
 	&__hero-bold-subtitle {
 		font-family: HelveticaNeueMedium;
 		
-		@include xl-desktop-up {
+		@include desktop-up {
 			font-family: HelveticaNeueBold;
 		}
 	}
 	
 	&__cta-link {
 		color: $color-black;
-		display: block;
+		display: inline-block;
 		font-family: HelveticaNeueMedium;
 		font-size: $font-size-xx-sm;
 	
@@ -199,6 +194,15 @@
 				color: $color-white;
 			}
 		}
+		
+		&--go-premium {
+      color: $color-black;
+      font-size: $font-size-x-sm;
+      
+      @include desktop-up {
+        font-size: $font-size-normal;
+      }
+    }
 	
 	  &--try-today {
 		  font-size: $font-size-x-sm;
@@ -213,14 +217,14 @@
 	/* Scroll section */
 	
 	&__scroll-down {
-		bottom: -50px;
+		bottom: 0;
 		margin: 0 auto;
 		position: absolute;
 		width: $block-container;
 		z-index: 99;
 		
 		@include mobile-up {
-			bottom: -25px;
+			bottom: -30px;
 		}
 		
 		@include xl-desktop-up {
@@ -269,9 +273,10 @@
 	/* What’s on TuneIn? */
 
 	&__whatson-tunein {
+		padding-top: 40px;
 		
 		@include iphone-5-portrait {
-			padding: $block-spacing-60 10px;	
+			padding: 10px;
 		}
 			
 		@include tablet-up {
@@ -280,14 +285,16 @@
 	}
 	
 	&__whatson-container {
+		
+		padding-top: 20px;
 
 		@include sm-desktop-up {
-			max-width: 680px;
+			max-width: 655px;
 			margin: 0 auto;
 		}
 		
 		@include desktop-up {
-			max-width: 1150px;
+			max-width: 1220px;
 		}
 	}
 	
@@ -295,24 +302,47 @@
 		
 		@include desktop-up {
 			float: left;
-			width: 520px;
+			width: 580px;
 		}
 	}
 	
 	&__games-playing-title {
 		border-bottom: 1px solid $color-border;
 		font-family: $font-helvetica-bold;
-		padding-bottom: 15px;
+		font-size: $font-size-x-sm;
 		margin: 15px 0;
+		padding-bottom: 15px;
+		
+		@include mobile-up {
+      font-size: $font-size-normal;
+    }
 	}
 	
-	&__title-subtext {
+	&__title {
+    &--align-center {
+      font-size: $font-size-md;
+
+      @include mobile-up {
+        font-size: $font-size-x-lg;
+        text-align: center;
+      }
+
+      @include desktop-up {
+        font-size: $font-size-xx-lg;
+        text-align: left;
+      }
+    }
+  }
 	
+	&__title-subtext {
+		font-size: $font-size-x-sm;
+
 		@include mobile-up {
 			font-size: $font-size-md-x-sm;
 			line-height: 28px;
 		}
 	}
+
 	
 	&__whatson-carousel {
 		
@@ -353,15 +383,19 @@
 	}
 	
 	&__games-playing-container {
+		margin: 0 auto;
 		
 		@include mobile-up {
-			margin: 0 auto;
 			width: 520px;
+		}
+		
+		@include iphone-4-landscape {
+			width: 400px;
 		}
 		
 		@include desktop-up {
 			position: absolute;
-			top: 220px;
+			top: 235px;
 		}
 	}
 	
@@ -380,21 +414,26 @@
 		}
 		
 		ul {
-			width: 60%;
+			width: 55%;
 			float: left;
 			
 			@include iphone-5-portrait {
-				width: 55%;
+				width: 50%;
 			}
 			
 			@include mobile-up {
-				width: 65%;
+				width: 60%;
+			}
+			
+			@include iphone-4-landscape {
+				width: 50%;
 			}
 		}
 		
 		li {
+			
 			.playlist-thumb-des {
-        color: $color-playlist-title; //DD Changes
+				color: $color-playlist-title;
 				overflow: hidden;
 				padding: 5px 10px 5px 0;
 				text-overflow: ellipsis;
@@ -430,9 +469,35 @@
 		.music-rank {
 			background: #d8d8d8;
 			border-radius: 100px;
-      color: $color-playlist-title; //DD Changes
+			color: $color-playlist-title;
+			height: 25px;
 			margin-top: 20px; 
-			padding: 5px 10px;
+			text-align: center;
+			width: 47px;
+			
+			@include mobile-up {
+				width: 65px;
+			}
+			
+			span {
+				display: block;
+				font-family: $font-helvetica-normal;
+    		margin-left: 7px;
+				padding-top: 6px;
+				
+				@include mobile-up {
+					padding-top: 4px;
+				}
+			}
+		}
+		
+		.up-arrow {
+			background: url(../img/music-rank-up-arrow.png) no-repeat #d8d8d8;
+			background-position: 7px center;
+			
+			@include mobile-up {
+				background-position: 10px center;
+			}
 		}
 		
 		.music-number {
@@ -445,18 +510,19 @@
 		}
 		
 		.music-play {
-			text-align: right;
+			cursor: pointer;
 			border-left: 1px solid $color-border;
 			float: left;
+			text-align: right;
 			width: 15%;
 			
 			img {
-				padding: 16px 0;
+				padding: 16px 0 13px 0;
 				width: 32px;
 				
 				@include mobile-up {
-					padding: 13px 0;
-					width: 45px;
+					padding: 15px 0 11px 0; 
+					width: 42px;
 				}
 			}
 		}
@@ -604,56 +670,104 @@
 		}
 	}
 
+	&__devices-heading {
+		font-family: $font-helvetica-bold;
+		font-size: $font-size-md;
+		margin: 0 0 10px;
+
+		@include mobile-up {
+			font-size:	$font-size-x-lg;
+		}
+
+	  @include sm-desktop-up {
+		  font-size: $font-size-xx-lg;
+		}
+	}
+
+	&__devices-text {
+		font-family: $font-helvetica-medium;
+	  font-size: $font-size-normal;
+		line-height: 25px;
+	  margin: 0 auto;
+
+		@include mobile-up {
+			width: 350px;
+		}
+
+		@include sm-desktop-up {
+		  font-size: $font-size-sm;
+			width: auto;
+		}
+	}
+
   &__devices-container {
+  	@include clear-fix;
 
 		ul {
+      -moz-columns: 2;
+      -webkit-columns: 2;
+			columns: 2;
+		  font-size: $font-size-x-sm;
 			margin: 0;
-			list-style-type: none;
+						 
 			padding: 0;
+			
+			@include mobile-up {
+			  -moz-columns: 1;
+        -webkit-columns: 1;
+			  columns: 1;
+			  text-align: center;
+			}
 		}
 
-		&--mobile {
+		li {
+			display: block;
+			line-height: 34px;
+			text-align: left;
 
-			ul {
-			  font-size: $font-size-x-sm;
-				float: left;
-				width: 50%;
+			&:after {
+				content: "";
+				
+			   
 			}
-
-			li {
-				line-height: 34px;
-			}
-
+			
 			@include mobile-up {
-				display: none;
-			}
-
-			@include clear-fix;
-		}
-
-		&--desktop {
-			display: none;
-
-			ul {
-				margin: 0 0 10px;
-			  padding: 8px 0;
-			}
-
-			@include mobile-up {
+			  display: inline-block;
 				font-family: $font-helvetica-medium;
-				display: block;
-
-				li {
+				height: 20px;
+				line-height: 24px;
+				padding-left: 10px;
+				vertical-align: middle;
+				
+				&:after {
 					border-right: 2px solid $color-black;
+					color: $color-white;
+					content: "|";
 					display: inline-block;
-					line-height: 18px;
-					padding: 0 10px;
-				}
+					height: 20px;
+					padding-right: 10px;
+			  }
+			}
+			
+			@include desktop-up {
+			  line-height: 20px;
+			}
+		}
 
-				li:last-child {
-					border-right: 0;
-				}
-			}				
+		li.nl {
+			display: none;
+			  
+			@include mobile-up {
+			  content: "";
+			  display: block;
+				line-height: 15px;
+			}		  
+		}
+		
+		li.remove-line {
+			&:after {
+		  	border-right: 0;	
+			}
 		}			 
 	}
 
@@ -739,11 +853,11 @@
 		}
 	 
 	  img {
-      height: 23px; //DD Changes
-		  width: 98px;
+		height: 23px;
+		width: 98px;
 		  
-		  @include mobile-up {
-			  width: 131px;
+		@include mobile-up {
+		  width: 131px;
 			}
 		}
 	}
@@ -755,6 +869,10 @@
 	  
 	  @include mobile-up {
 		  margin: 15px 0;
+		}
+		
+		@include desktop-up {
+		  font-size: $font-size-md;
 		}
 	}
  
@@ -859,10 +977,14 @@
 		  font-family: $font-helvetica-medium;
 			font-size: $font-size-xxx-sm;
 		  display: inline-block;
-		  padding: 0 15px;
-		 
-		  @include tablet-up {
+			line-height: 12px;
+		  padding: 5px 13px 0;
+			vertical-align: middle;
+
+			@include tablet-up {
 			  font-size: $font-size-x-sm;
+				line-height: 18px;
+  		  padding-top: 0;
 		  }
 		}
 	 
