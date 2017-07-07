@@ -5,6 +5,11 @@ var webpack = require('webpack');
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var CompressionPlugin = require("compression-webpack-plugin");
+var htmlclean = require('htmlclean');
+var fs = require('fs-extra');
+var HtmlMinifierPlugin = require('html-minifier-webpack-plugin');
+var minify = require('html-minifier').minify;
 
 module.exports = {
 	context: path.resolve('./app'),
@@ -12,7 +17,7 @@ module.exports = {
 	output: {
 		path: path.resolve('./dist/'),
 		filename: 'js/main.min.js',
-		publicPath: '/'
+		publicPath: ''
 	},
 	module: {
 		//devtool: 'source-map',
@@ -24,11 +29,8 @@ module.exports = {
 				presets: ['es2015', 'stage-0']
 			}
 		},{
-			test: /\.html$/,
-			loader: 'html'
-		},{
 			test: /\.(scss|css)$/,
-			loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
+			loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader", { publicPath: '../' })
 		},{
 			test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 			loader: "url-loader?limit=10000&mimetype=application/font-woff&name=fonts/[name].[ext]"
@@ -41,14 +43,18 @@ module.exports = {
 		}]
 	},
 	plugins: [
+		new HtmlWebpackPlugin({
+			template: 'index.html',
+			inject: false,
+			minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true
+      }
+		}),
 		new CleanWebpackPlugin(['dist']),
-		// new HtmlWebpackPlugin({
-		// 	template: './index.html'
-		// }),
-		/*new webpack.ProvidePlugin({
-			$: 'jquery',
-			jQuery: 'jquery',
-		}),*/
 		new ExtractTextPlugin("./css/styles.css"),
 		new BrowserSyncPlugin({
 			server: {
@@ -58,11 +64,16 @@ module.exports = {
 			host: 'localhost',
 			open: false
 		}),
+		new CompressionPlugin({
+	    asset: "[path].gz[query]",
+	    algorithm: "gzip",
+	    test: /\.(js|css|html)$/,
+	    threshold: 10240,
+	    minRatio: 0
+    }),
 		new CopyWebpackPlugin([{
 			from: './img/**/*',
 			to: './'
-		},{
-			from: './*.html'
 		}])
 	]
 }

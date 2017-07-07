@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Static website boilerplate using webpack and bootstrap">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href="img/favicon.ico">
     <title>TuneIn - Sports</title>
-		<link href="css/styles.css" rel="stylesheet">
-		<!-- Ampush Facebook & Ampush Tracker Pixel Code -->
+		<link href="css/styles.min.css" rel="stylesheet">
+    <!-- Ampush Facebook & Ampush Tracker Pixel Code -->
 		<script>
 			// Facebook Pixel Code
 			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -30,41 +31,35 @@
 		<!-- End Ampush Facebook & Ampush Tracker Pixel Code -->
   </head>
 	<body>
-		<section class="block block--full-width">
-			<div class="block__hero-container">
-				<div class="block__hero-image">
-					<div class="block__hero-content">
-						<h1 class="block__hero-logo"><img src="img/logo-white.png" alt="TuneIn Logo"></h1>
-						<h2 class="block__title block__title--hero">Never miss another game.</h2>
-						<div class="block__hero-subtitle">
-							<p class="block__hero-bold-subtitle">MLB, NFL, NBA, NHL &amp; More</p>
-							<p>Get live play-by-play from every game, all season long.</p>
-						</div>
-						<div class="block__cta-container">
-							<a class="block__cta js-tracker js-hero-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
-							<a class="block__cta-link block__cta-link--hero js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
-						</div>
-					</div>
+		<section class="block block--full-width block__hero-container">
+			<div class="block__hero-content">
+				<h1 class="block__hero-logo"><img src="img/logo-white.png" alt="TuneIn Logo"></h1>
+				<h2 class="block__title block__title--hero">Never miss another game.</h2>
+				<div class="block__hero-subtitle">
+					<p class="block__hero-bold-subtitle">MLB, NFL, NBA, NHL &amp; More</p>
+					<p>Get live play-by-play from every game, all season long.</p>
+				</div>
+				<div class="block__cta-container">
+					<a class="block__cta js-tracker js-hero-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
+					<a class="block__cta-link block__cta-link--hero js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
 				</div>
 			</div>
 			<div class="block__scroll-down">
-				<div class="block__scroll-btn">
-					<a href="#whatson-tunein">				
-					  <svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-							<title>ArrowDown-Tablet</title>
-							<desc>Created with Sketch.</desc>
-							<defs></defs>
-							<g id="HDMock-Sports-v3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-									<g id="Template-Sports-Boy-Tablet-Portrait-v4" transform="translate(-354.000000, -439.000000)">
-											<g id="ArrowDown-Tablet" transform="translate(356.000000, 441.000000)">
-													<circle id="Oval" stroke="#FFFFFF" stroke-width="3" fill="#000000" cx="28" cy="28" r="28"></circle>
-													<polygon id="Page-1" fill="#FFFFFF" points="41.5943504 21 27.9996629 34.2577252 14.4063237 21 13 22.3714661 27.9996629 37 43 22.3714661"></polygon>
-											</g>
-									</g>
-							</g>
-						</svg>
-					</a>
-				</div>
+				<a href="#whatson-tunein" class="block__scroll-btn">				
+					<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<title>ArrowDown-Tablet</title>
+						<desc>Created with Sketch.</desc>
+						<defs></defs>
+						<g id="HDMock-Sports-v3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="Template-Sports-Boy-Tablet-Portrait-v4" transform="translate(-354.000000, -439.000000)">
+										<g id="ArrowDown-Tablet" transform="translate(356.000000, 441.000000)">
+												<circle id="Oval" stroke="#FFFFFF" stroke-width="3" fill="#000000" cx="28" cy="28" r="28"></circle>
+												<polygon id="Page-1" fill="#FFFFFF" points="41.5943504 21 27.9996629 34.2577252 14.4063237 21 13 22.3714661 27.9996629 37 43 22.3714661"></polygon>
+										</g>
+								</g>
+						</g>
+					</svg>
+				</a>
 			</div>
 		</section>
 		<section class="block block__whatson-tunein">
@@ -102,67 +97,72 @@
 					<div class="block__games-music-list clearfix">
 						<ul>
 							<li class="block__games-music clearfix">
-								<picture class="playlist-thumb"><img src="img/matchup1.jpg"></picture>
+								<picture class="playlist-thumb"><img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team-logo/miami-marlins.png"></picture>
 								<p class="playlist-thumb-des">Miami Marlins</p>
 							</li>
 							<li class="block__games-music clearfix">
-								<picture class="playlist-thumb "><img src="img/matchup1.jpg"></picture>
+								<picture class="playlist-thumb "><img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team-logo/washington-nationals.png"></picture>
 								<p class="playlist-thumb-des">Washington Nationals</p>
 							</li>
 						</ul>
 						<div class="music-rank-content">
-							<div class="music-rank up-arrow" ><span>6th</span></div>
+							<div class="up-arrow" ><?xml version="1.0" ?><svg height="12" id="triangle-up" viewBox="0 0 32 32" fill="#37444e" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M4 24 H28 L16 6 z"/></svg><span>6th</span>
+							</div>
 						</div>
 						<div class="music-number">
 							<div class="music-count">4</div>
 							<div class="music-count">8</div>
 						</div>
 						<div class="music-play">
-							<a href="#go-premium"><img src="img/play-btn.svg"></a>
+							<a href="#go-premium"><svg viewBox="0 0 50 51" xmlns="http://www.w3.org/2000/svg"><title>Group 8</title><g fill="#37444E" fill-rule="evenodd"><path d="M25 50.215c-13.81 0-25-11.18-25-24.968C0 11.46 11.19.28 25 .28s25 11.18 25 24.967c0 13.788-11.19 24.968-25 24.968zm0-1.99c12.695 0 22.99-10.286 22.99-22.978C47.99 12.557 37.695 2.27 25 2.27c-12.695 0-22.99 10.286-22.99 22.977C2.01 37.94 12.305 48.224 25 48.224z" fill-rule="nonzero"/><path d="M20.313 15.26v18.828c0 .357.205.688.524.843a.943.943 0 0 0 .98-.107l11.825-9.414a.933.933 0 0 0 .353-.736.932.932 0 0 0-.353-.734l-11.824-9.414a.93.93 0 0 0-.98-.11.942.942 0 0 0-.525.844"/></g></svg></a>
 						</div>
 					</div>
 					<div class="block__games-music-list clearfix">
 						<ul>
 							<li class="block__games-music clearfix">
-								<picture class="playlist-thumb"><img src="img/matchup1.jpg"></picture>
-								<p class="playlist-thumb-des">Miami Marlins</p>
+								<picture class="playlist-thumb"><img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team-logo/pittsburg-pirates.png"></picture>
+								<p class="playlist-thumb-des">Pittsburgh Pirates</p>
 							</li>
 							<li class="block__games-music clearfix">
-								<picture class="playlist-thumb "><img src="img/matchup1.jpg"></picture>
-								<p class="playlist-thumb-des">Washington Nationals</p>
+								<picture class="playlist-thumb "><img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team-logo/boston-red-sox.png"></picture>
+								<p class="playlist-thumb-des">Boston Red Sox</p>
 							</li>
 						</ul>
 						<div class="music-rank-content">
-							<div class="music-rank up-arrow" ><span>6th</span></div>
+							<div class="up-arrow" ><?xml version="1.0" ?><svg height="12" id="triangle-up" viewBox="0 0 32 32" fill="#37444e" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M4 24 H28 L16 6 z"/></svg><span>6th</span>
+							</div>
 						</div>
 						<div class="music-number">
 							<div class="music-count">4</div>
 							<div class="music-count">8</div>
 						</div>
 						<div class="music-play">
-							<a href="#go-premium"><img src="img/play-btn.svg"></a>
+							<a href="#go-premium"><svg viewBox="0 0 50 51" xmlns="http://www.w3.org/2000/svg"><title>Group 8</title><g fill="#37444E" fill-rule="evenodd"><path d="M25 50.215c-13.81 0-25-11.18-25-24.968C0 11.46 11.19.28 25 .28s25 11.18 25 24.967c0 13.788-11.19 24.968-25 24.968zm0-1.99c12.695 0 22.99-10.286 22.99-22.978C47.99 12.557 37.695 2.27 25 2.27c-12.695 0-22.99 10.286-22.99 22.977C2.01 37.94 12.305 48.224 25 48.224z" fill-rule="nonzero"/><path d="M20.313 15.26v18.828c0 .357.205.688.524.843a.943.943 0 0 0 .98-.107l11.825-9.414a.933.933 0 0 0 .353-.736.932.932 0 0 0-.353-.734l-11.824-9.414a.93.93 0 0 0-.98-.11.942.942 0 0 0-.525.844"/></g></svg></a>
 						</div>
 					</div>
 					<div class="block__games-music-list clearfix">
 						<ul>
 							<li class="block__games-music clearfix">
-								<picture class="playlist-thumb"><img src="img/matchup1.jpg"></picture>
-								<p class="playlist-thumb-des">Miami Marlins</p>
+								<picture class="playlist-thumb">
+									<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team-logo/colarado-rockies.png"></picture>
+								<p class="playlist-thumb-des" alt="Colorado Rockies">Colorado Rockies</p>
 							</li>
 							<li class="block__games-music clearfix">
-								<picture class="playlist-thumb "><img src="img/matchup1.jpg"></picture>
-								<p class="playlist-thumb-des">Washington Nationals</p>
+								<picture class="playlist-thumb ">
+									<img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/team-logo/milwaukee-brewers.png"></picture>
+								<p class="playlist-thumb-des">Milwaukee Brewers</p>
 							</li>
 						</ul>
 						<div class="music-rank-content">
-							<div class="music-rank up-arrow" ><span>6th</span></div>
+							<div class="up-arrow" ><?xml version="1.0" ?><svg height="12" id="triangle-up" viewBox="0 0 32 32" fill="#37444e" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M4 24 H28 L16 6 z"/></svg><span>6th</span>
+							</div>
 						</div>
 						<div class="music-number">
-							<div class="music-count">4</div>
-							<div class="music-count">8</div>
+							<div class="music-count">0</div>
+							<div class="music-count">3</div>
 						</div>
 						<div class="music-play">
-							<a href="#go-premium"><img src="img/play-btn.svg"></a>
+							<a href="#go-premium"><svg viewBox="0 0 50 51" xmlns="http://www.w3.org/2000/svg"><title>Group 8</title><g fill="#37444E" fill-rule="evenodd"><path d="M25 50.215c-13.81 0-25-11.18-25-24.968C0 11.46 11.19.28 25 .28s25 11.18 25 24.967c0 13.788-11.19 24.968-25 24.968zm0-1.99c12.695 0 22.99-10.286 22.99-22.978C47.99 12.557 37.695 2.27 25 2.27c-12.695 0-22.99 10.286-22.99 22.977C2.01 37.94 12.305 48.224 25 48.224z" fill-rule="nonzero"/><path d="M20.313 15.26v18.828c0 .357.205.688.524.843a.943.943 0 0 0 .98-.107l11.825-9.414a.933.933 0 0 0 .353-.736.932.932 0 0 0-.353-.734l-11.824-9.414a.93.93 0 0 0-.98-.11.942.942 0 0 0-.525.844"/></g></svg></a>
 						</div>
 					</div>
 				</div>
@@ -172,27 +172,25 @@
 				<h3 class="block__title-secondary">Go Premium</h3>
 				<p class="block__title-text">Start listening to every game live.</p>
 				<div class="block__subscribe-container">
-					<div class="block__subscribe-copy">
-						<h4 class="block__subscribe-heading">Premium</h4>
-						<ul class="block__subscribe-list">
-							<li>Live NFL, MLB, NBA games</li>
-							<li>Unlimited Audiobooks</li>
-							<li>Commercial-Free Music</li>
-							<li>100,000 Radio Stations</li>
-							<li>5.7 M Podcasts</li>
-						</ul>
-						<div class="block__cta-container">
-							<a class="block__cta block__cta--subscribe js-tracker js-landing-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
-							<a class="block__cta-link--go-premium js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
-						</div>
+					<h4 class="block__subscribe-heading">Premium</h4>
+					<ul class="block__subscribe-list">
+						<li>Live NFL, MLB, NBA games</li>
+						<li>Unlimited Audiobooks</li>
+						<li>Commercial-Free Music</li>
+						<li>100,000 Radio Stations</li>
+						<li>5.7 M Podcasts</li>
+					</ul>
+					<div class="block__cta-container">
+						<a class="block__cta block__cta--subscribe js-tracker js-landing-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
+						<a class="block__cta-link--go-premium js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
 					</div>
-			  </div>
+				</div>
 		</section>
 		<section class="block block__devices">
 			<h3 class="block__title-secondary">Listen Live, Anywhere</h3>
 			<p class="block__title-text">Enjoy original, live, and on demand content on hundreds of devices.</p>
 			<picture class="block__image-container">
-				<img class="block__devices-img" src="img/devices.png" alt="Devices">
+				<img class="block__devices-img b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/devices.png" alt="Devices">
 			</picture>
 			<div class="block__devices-container">
 				<ul>
@@ -213,43 +211,39 @@
 				</ul>
 			</div>
 		 </section>
-		 <section  class="block">
-			 <div class="block__testimonials">
-				 <div class="block__testimonials-image">
-					 <picture>
-						 <img src="img/iphone-android.jpg" alt="iPhone Android Phone">
-					 </picture>
-				 </div>
-				 <div class="block__testimonials-container">
-					 <picture class="block__testimonials-ratings">
-						 <img src="img/ratings.svg" alt="Testimonial Ratings">
-					 </picture>
-					 <h3 class="block__testimonials-heading">Best Radio Ever</h3>
-					 <p class="block__testimonials-copy">“As a die hard New England sports fan the TuneIn Radio App is my connection to all sports Boston. I listen to all New England Patriots , Boston Red Sox , Boston Bruins Hockey and Celtics. All for $9.99 a month. Way cheaper than the NFL, NBA, MLB and NHL app. Check it out and add all four of those apps up. TuneIn is clean solid quality audio. It's easy on my download limits and iPhone battery. I rate this TuneIn App #1 in
-	all my iPhone Apps.”</p>
-					 <p class="block__testimonials-author">- JamieInNewHampshire</p>
-				 </div>
-      </div>
+		 <section  class="block block__testimonials">
+			 <div class="block__testimonials-image">
+				 <picture>
+					 <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/iphone-android.jpg" alt="iPhone Android Phone">
+				 </picture>
+			 </div>
+			 <div class="block__testimonials-container">
+				 <picture class="block__testimonials-ratings">
+					 <svg width="135" height="23" viewBox="0 0 135 23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>Ratings</title><defs><path id="a" d="M26.78 22.373V0H0v22.373z"/><path id="c" d="M24.796 22.373V0H0v22.373z"/><path id="e" d="M24.796 22.373V0H0v22.373z"/><path id="g" d="M24.796 22.373V0H0v22.373z"/><path id="i" d="M24.796 22.373V0H0v22.373z"/></defs><g fill="none" fill-rule="evenodd"><g transform="translate(108)"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M26.73 8.48c-.13-.344-.48-.584-.894-.61l-7.95-.5L14.315.52C14.15.204 13.786 0 13.39 0c-.397 0-.76.204-.925.52L8.892 7.37l-7.948.5c-.414.026-.765.266-.893.61-.128.347-.007.72.31.956l6.628 4.908-2.223 6.9c-.114.356.036.74.375.958.334.216.807.23 1.156.03l7.094-4.026 7.093 4.027c.35.198.822.185 1.156-.03.338-.22.49-.603.374-.958l-2.222-6.9 6.627-4.91c.316-.234.438-.61.31-.954z" fill="#36B4A7" mask="url(#b)"/></g><g transform="translate(81)"><mask id="d" fill="#fff"><use xlink:href="#c"/></mask><path d="M24.75 8.48a.93.93 0 0 0-.828-.61l-7.36-.5L13.254.52a.947.947 0 0 0-.856-.52.948.948 0 0 0-.856.52L8.234 7.37l-7.36.5a.93.93 0 0 0-.827.612.856.856 0 0 0 .286.955l6.137 4.908-2.058 6.9a.866.866 0 0 0 .347.958 1 1 0 0 0 1.07.03l6.568-4.026 6.568 4.027a1 1 0 0 0 1.07-.03.867.867 0 0 0 .348-.958l-2.058-6.9 6.136-4.91a.856.856 0 0 0 .287-.954z" fill="#36B4A7" mask="url(#d)"/></g><g transform="translate(54)"><mask id="f" fill="#fff"><use xlink:href="#e"/></mask><path d="M24.75 8.48a.93.93 0 0 0-.828-.61l-7.36-.5L13.254.52a.947.947 0 0 0-.856-.52.948.948 0 0 0-.856.52L8.234 7.37l-7.36.5a.93.93 0 0 0-.827.612.856.856 0 0 0 .286.955l6.137 4.908-2.058 6.9a.866.866 0 0 0 .347.958 1 1 0 0 0 1.07.03l6.568-4.026 6.568 4.027a1 1 0 0 0 1.07-.03.867.867 0 0 0 .348-.958l-2.058-6.9 6.136-4.91a.856.856 0 0 0 .287-.954z" fill="#36B4A7" mask="url(#f)"/></g><g transform="translate(27)"><mask id="h" fill="#fff"><use xlink:href="#g"/></mask><path d="M24.75 8.48a.93.93 0 0 0-.828-.61l-7.36-.5L13.254.52a.947.947 0 0 0-.856-.52.948.948 0 0 0-.856.52L8.234 7.37l-7.36.5a.93.93 0 0 0-.827.612.856.856 0 0 0 .286.955l6.137 4.908-2.058 6.9a.866.866 0 0 0 .347.958 1 1 0 0 0 1.07.03l6.568-4.026 6.568 4.027a1 1 0 0 0 1.07-.03.867.867 0 0 0 .348-.958l-2.058-6.9 6.136-4.91a.856.856 0 0 0 .287-.954z" fill="#36B4A7" mask="url(#h)"/></g><mask id="j" fill="#fff"><use xlink:href="#i"/></mask><path d="M24.75 8.48a.93.93 0 0 0-.828-.61l-7.36-.5L13.254.52a.947.947 0 0 0-.856-.52.948.948 0 0 0-.856.52L8.234 7.37l-7.36.5a.93.93 0 0 0-.827.612.856.856 0 0 0 .286.955l6.137 4.908-2.058 6.9a.866.866 0 0 0 .347.958 1 1 0 0 0 1.07.03l6.568-4.026 6.568 4.027a1 1 0 0 0 1.07-.03.867.867 0 0 0 .348-.958l-2.058-6.9 6.136-4.91a.856.856 0 0 0 .287-.954z" fill="#36B4A7" mask="url(#j)"/></g></svg>
+				 </picture>
+				 <h3 class="block__testimonials-heading">Best Radio Ever</h3>
+				 <p class="block__testimonials-copy">“As a die hard New England sports fan the TuneIn Radio App is my connection to all sports Boston. I listen to all New England Patriots , Boston Red Sox , Boston Bruins Hockey and Celtics. All for $9.99 a month. Way cheaper than the NFL, NBA, MLB and NHL app. Check it out and add all four of those apps up. TuneIn is clean solid quality audio. It's easy on my download limits and iPhone battery. I rate this TuneIn App #1 in
+all my iPhone Apps.”</p>
+				 <p class="block__testimonials-author">- JamieInNewHampshire</p>
+			 </div>
 	  </section>
-		<section class="block block--full-width">
-		  <div class="block__try-today">
-				<div class="block__try-today-copy">
-					<h3 class="block__try-today-heading">Try TuneIn Today</h3>
-					<div class="block__cta-container">
-						<a class="block__cta js-tracker js-footer-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
-						<a class="block__cta-link block__cta-link--try-today js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
-					</div>
+		<section class="block block--full-width block__try-today">
+			<div class="block__try-today-copy">
+				<h3 class="block__try-today-heading">Try TuneIn Today</h3>
+				<div class="block__cta-container">
+					<a class="block__cta js-tracker js-footer-tracker" href="https://beta.tunein.com/login">Listen Free For 30 Days</a>
+					<a class="block__cta-link block__cta-link--try-today js-tracker" href="https://beta.tunein.com/login">Cancel anytime.</a>
 				</div>
 			</div>
 		</section>
 		<footer class="block block--full-width block__footer">
 		  <ul class="block__footer-list">
-			  <li><a href="">Contact Us</a></li>
-			  <li><a href="">Privacy</a></li>
-			  <li><a href="">Term of Service</a></li>
+				<li><a class="js-tracker" target="_blank" href="http://beta.tunein.com/about/">Contact Us</a></li>
+			  <li><a class="js-tracker" target="_blank" href="http://beta.tunein.com/policies/privacy/">Privacy</a></li>
+			  <li><a class="js-tracker" target="_blank" href="http://beta.tunein.com/policies/">Term of Service</a></li>
 			</ul>
 			<picture class="block__footer-logo">
-			  <img src="img/logo-white.png" alt="TuneIn Logo">
+			  <img class="b-lazy" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" data-src="img/logo-white.png" alt="TuneIn Logo">
 			</picture>
 			<p class="block__footer-copyright">&copy; 2017 TuneIn, Inc. All rights reserved</p>
 		</footer>

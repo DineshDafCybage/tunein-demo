@@ -4,7 +4,7 @@ import {jump} from "../js/vendor/jump";
  * Scroll duration.
  * @private {number}
  */
-const scrollDuration = 900;
+const SCROLL_DURATION = 900;
 
 /**
  * Handles smooth scroll functionality.
@@ -30,7 +30,7 @@ export function smoothScroll () {
 		e.stopPropagation();
 		e.preventDefault();
 		jump(this.getAttribute('href'), {
-			duration: scrollDuration
+			duration: SCROLL_DURATION
 		});
 	}
 

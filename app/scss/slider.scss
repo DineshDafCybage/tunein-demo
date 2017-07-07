@@ -4,26 +4,33 @@
 .block {
 	
 	&__slider {
-		border-radius: 5px;
-		display: block;
-		margin: 20px auto;
-		position: relative;
-		width: 100%;
-		-webkit-user-select: none;
 		-khtml-user-select: none;
 		-moz-user-select: -moz-none;
 		-o-user-select: none;
-		user-select: none;
+		-webkit-user-select: none;
+		@include border-radius(5px);
+		display: block;
+		margin: 35px auto;
 		overflow: hidden;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
+		position: relative;
+		user-select: none;
+		width: $block-container;
 		
-		@media screen and (min-width: 640px) {
+		@media only screen and (max-device-width: 600px) and (orientation:landscape) {
+			width: 530px;
+		}
+		
+		@include mobile-up {
 			width: 650px;
 		}
 		
-		@include mobile-landscape {
+		@media screen and (min-device-width: 640px) and (orientation:landscape) {
 			width: 600px;
+			max-width: 100%;
+		}
+		
+		@include sm-desktop-up {
+			width: 650px;
 		}
 		
 		@include iphone-5-landscape {
@@ -31,16 +38,22 @@
 		}
 		
 		.frame {
-			position: relative;
-			width: 100%;
-			margin: 0 auto;
+			@include border-radius(5px);
 			font-size: 0;
 			line-height: 0;
+			margin: 0 auto;
 			overflow: hidden;
+			position: relative;
 			white-space: nowrap;
-			-webkit-border-radius: 5px;
-			-moz-border-radius: 5px;
-			border-radius: 5px;
+			width: $block-container;
+			
+			@media only screen and (max-width: 600px) and (orientation:landscape) {
+				width: 530xp;
+			}
+			
+			@include iphone-5-landscape {
+				width: 450px;
+			}
 			
 			@include mobile-landscape {
 				width: 520px;
@@ -50,28 +63,29 @@
 				margin-left: -70px;
 				width: 720px;
 			}
-			
-			@include iphone-5-landscape {
-				width: 450px;
-			}
 
 			li {
-				position: relative;
+				@include border-radius (5px);
+				border: solid 1px #979797;
 				display: inline-block;
+				position: relative;
+				
+				img {
+					@include border-radius (5px);
+				}
 			}
 		}
 		
 		.prev, 
 		.next {
+			@include border-radius (5px);
+			background: $color-black;
+			cursor: pointer;
+			display: block;
+			height: 100%;
+			opacity: 0.5;
 			position: absolute;
 			top: 0;
-			display: block;
-			cursor: pointer;
-			background: #000;
-			opacity: 0.5; 
-			-webkit-border-radius: 5px;
-			-moz-border-radius: 5px;
-			border-radius: 5px;
 		}
 		
 		.next {
@@ -84,36 +98,41 @@
 
 		.next svg, 
 		.prev svg {
+			height: 145px;
 			width: 80px;
-			height: 147px; 
+			
+			@include mobile-up {
+				width: 80px;
+			}
 			
 			@include mobile-landscape {
 				width: 70px;
-    		height: 137px;
+			}
+			
+			@include tablet-up {
+				width: 80px;
 			}
 		}
 	}
 
 	&__multislides {
 		li {
-			width: 150px;
-			height: 150px;
+			height: 148px;
 			margin-right: 10px;
-			
-			@include mobile-landscape {
-				width: 140px;
-				height: 140px;
-				margin: 0 10px 20px 0;
-			}
+			width: 148px;
 			
 			@include iphone-5-landscape {
-				width: 140px;
-				height: 140px;
-				margin: 0 10px 20px 0;
+				height: 138px;
+				width: 138px;
+			}
+			
+			@include mobile-landscape {
+				height: 138px;
+				width: 138px;
 			}
 			
 			&:last-child {
-					margin-right: 0;
+				margin-right: 0;
 			}
 		}	
 	}
@@ -121,21 +140,21 @@
 	&__slider.desktop {
 		
 		@include sm-desktop-up {
-			width: 533px;
-			white-space: normal;
-			margin: 10px auto;
 			float: right;
+			margin: 10px auto;
+			white-space: normal;
+			width: 600px;
 			
 			.frame {
-				width: 100%;
-				white-space: normal;
 				margin-left: auto;
+				white-space: normal;
+				width: $block-container;
 			}
 			
 			.slides {
-				transform: none !important;
 				margin: 0;
 				padding: 0;
+				transform: none !important;
 			}
 			
 			.js_prev,
@@ -148,9 +167,9 @@
 	&__multislides.desktop {
 		li {
 			@include sm-desktop-up {
-				width: 170px;
-				height: 170px;
+				height: 168px;
 				margin: 0 10px 20px 0;
+				width: 168px;
 
 				&:nth-child(3n) {
 					margin-right: 0;
@@ -159,7 +178,7 @@
 		}
 	}
 
-	@media only screen and (min-width: 320px) and (max-width: 568px) {
+	@media only screen and (min-width: 320px) and (max-width: 600px) {
 		&__slider .js_prev,
 		&__slider .js_next {
 			display: none;

@@ -59,20 +59,17 @@
 	/* Hero section */
 	
 	&__hero-container {
-    color: $color-white;	
-	}
-		
-	&__hero-image {
-		background: url('../img/sports-hero-mobile.jpg') no-repeat center 0;
+    color: $color-white;
+		background: url(../img/sports-hero-mobile.jpg) no-repeat center 0;
 		background-size: contain;
-		height: 440px;
+		height: 430px;
 		
 		@include iphone-5-portrait {
 			height: 400px;
 		}
 		
 		@include mobile-up {
-			background: url('../img/sports-hero.jpg') no-repeat center 0;
+			background: url(../img/sports-hero.jpg) no-repeat center 0;
 			background-size: cover;
 			height: 470px;
 		}
@@ -234,6 +231,7 @@
 	
 	&__scroll-btn {
 		cursor: pointer;
+		display: block;
 		height: 50px;
 		margin: 0 auto;
 		width: 50px;
@@ -278,8 +276,12 @@
 		@include iphone-5-portrait {
 			padding: 10px;
 		}
-			
-		@include tablet-up {
+		
+		@include mobile-up {
+			padding: 60px 10px; 
+		}
+		
+		@include xl-desktop-up {
 			padding: $block-spacing-60;
 		}
 	}
@@ -402,8 +404,7 @@
 	&__games-music-list {
 		background: $color-white;
 		border: 1px solid $color-border;
-		border-radius: 4px;
-		font-family: $font-helvetica-bold;
+		@include border-radius (4px);
 		font-size: $font-size-xxxx-sm;
 		padding: 10px;
 		margin-top: 15px;
@@ -414,8 +415,9 @@
 		}
 		
 		ul {
-			width: 55%;
+			width: 52%;
 			float: left;
+			font-family: "HelveticaNeueBold";
 			
 			@include iphone-5-portrait {
 				width: 50%;
@@ -463,46 +465,46 @@
 		}
 		
 		.music-rank-content {
-			float: left;
-		}
-		
-		.music-rank {
 			background: #d8d8d8;
-			border-radius: 100px;
+			@include border-radius (100px);
 			color: $color-playlist-title;
+			float: left;
 			height: 25px;
-			margin-top: 20px; 
+			margin-top: 20px;
 			text-align: center;
 			width: 47px;
 			
 			@include mobile-up {
-				width: 65px;
+				width: 60px;
+			}
+			
+			svg {
+				float: left;
+				padding: 6px 4px;
+				
+				@include mobile-up {
+					padding: 6px;
+				}
 			}
 			
 			span {
 				display: block;
-				font-family: $font-helvetica-normal;
-    		margin-left: 7px;
-				padding-top: 6px;
+				float: left;
+				padding: 6px 0 0 0;
+				line-height: 18px;
 				
 				@include mobile-up {
-					padding-top: 4px;
+					padding: 5px 0;
 				}
-			}
-		}
-		
-		.up-arrow {
-			background: url(../img/music-rank-up-arrow.png) no-repeat #d8d8d8;
-			background-position: 7px center;
-			
-			@include mobile-up {
-				background-position: 10px center;
+				
+				@include tablet-up {
+					padding: 3px 0;
+				}
 			}
 		}
 		
 		.music-number {
 			float: left;
-			font-family: $font-helvetica-normal;
 			
 			.music-count {
 				padding: 10px 15px;
@@ -512,16 +514,31 @@
 		.music-play {
 			cursor: pointer;
 			border-left: 1px solid $color-border;
-			float: left;
+			float: right;
 			text-align: right;
-			width: 15%;
+			width: 18.5%;
 			
-			img {
-				padding: 16px 0 13px 0;
+			a {
+				display: block;
+		    margin: 15px;
+				line-height: 0;
+				text-align: center;
+				
+				@include mobile-up {
+				  margin: 15px 15px 12px 20px;
+				}
+				
+				@include tablet-up {
+				  margin: 15px 15px 12px 30px;
+				}
+			}
+			
+			svg {
+				height: 32px;
 				width: 32px;
 				
 				@include mobile-up {
-					padding: 15px 0 11px 0; 
+  				height: 42px;
 					width: 42px;
 				}
 			}
@@ -531,7 +548,7 @@
 	/* Go Premium */
 	
 	&__subscribe {
-	  background: url('../img/subscribe.jpg') no-repeat 0 0;
+		background: url(../img/subscribe.jpg) no-repeat 0 0;
 		background-size: cover;
 		color: $color-white;
 		@include mobile-up {
@@ -545,30 +562,28 @@
 
 	&__subscribe-container {
 	  background: $color-white;
-		border-radius: 5px;
+		@include border-radius (5px);
     color: $color-black;
 		margin: 30px auto 0;
+		padding: 25px 17px 35px;
 
 		@include mobile-up {
-		  border-radius: 20px; 
+		  @include border-radius (20px); 
 			margin-bottom: 35px;
+			padding: 25px 34px;
 		  text-align: left;
-			width: 390px;
+			width: 380px;
 		}
 		
 		@include desktop-up {
-		  border-radius: 5px;
+		   @include border-radius (5px); 
 		}
-	}
-	
-	&__subscribe-copy {
-    padding: 25px 17px 35px;
 		
-		@include mobile-up {
-			padding-left: 34px;
+		@include xl-desktop-up {
+			padding: 40px 65px;
 		}
 	}
-	
+
 	&__subscribe-heading {
 	  font-family: $font-helvetica-bold;
 		font-size: $font-size-md-x-sm;
@@ -727,8 +742,6 @@
 
 			&:after {
 				content: "";
-				
-			   
 			}
 			
 			@include mobile-up {
@@ -820,6 +833,10 @@
 		  @include sm-desktop-up {
 			  width: $block-container;
 			}
+			
+			@include xl-desktop-up {
+				width: 536px;
+			}
 		}	
 	}
 
@@ -899,7 +916,7 @@
 	/* Try TuneIn Today */
 
 	&__try-today {
-		background: url('../img/try-tune-in-today.jpg') no-repeat center 0;
+		background: url(../img/try-tune-in-today.jpg) no-repeat center 0;
 		background-size: cover;
  		color: $color-white;
 		text-align: center;
@@ -914,7 +931,7 @@
 		}
 		
 		@include sm-desktop-up {
-		  background: url('../img/try-tune-in-today-large.jpg') no-repeat center 0;
+			background: url(../img/try-tune-in-today-large.jpg) no-repeat center 0;
 			background-size: cover;
 			display: -ms-flexbox;
       display: flex;
@@ -973,19 +990,23 @@
   
   &__footer-list {
     li {
-		  border-right: 2px solid $color-white;
-		  font-family: $font-helvetica-medium;
+			border-right: 2px solid $color-white;
+			font-family: $font-helvetica-medium;
 			font-size: $font-size-xxx-sm;
-		  display: inline-block;
+			display: inline-block;
 			line-height: 12px;
-		  padding: 5px 13px 0;
+			padding: 5px 13px 0;
 			vertical-align: middle;
 
 			@include tablet-up {
-			  font-size: $font-size-x-sm;
+				font-size: $font-size-x-sm;
 				line-height: 18px;
-  		  padding-top: 0;
-		  }
+				padding-top: 0;
+			}
+
+			@include retina-devices {
+				padding-top: 5px;
+			}
 		}
 	 
 	  li:last-child {
@@ -1014,4 +1035,50 @@
 		  font-size: $font-size-x-sm;
 		}
 	}
+}
+
+.ios {
+	.music-rank-content span {
+    padding: 5px 0;
+		
+		@include retina-devices {
+			padding: 5px 0;
+		}
+	}
+	
+	.block {
+		&__cta {
+			line-height: 52px;
+		}
+	}
+}
+
+.ubuntu {
+	.music-rank-content span {
+    padding: 5px 0;
+		
+		@include retina-devices {
+			padding: 5px 0;
+		}
+	}
+	
+	.block {
+		&__cta {
+			@include mobile-up {
+				line-height: 50px;
+			}
+		}
+	}
+}
+
+.b-lazy {
+  -webkit-transition: opacity 500ms ease-in-out;
+	-moz-transition: opacity 500ms ease-in-out;
+	-o-transition: opacity 500ms ease-in-out;
+	transition: opacity 500ms ease-in-out;
+	opacity: 0;
+
+	&.b-loaded {
+		opacity: 1;
+	}                                    
 }

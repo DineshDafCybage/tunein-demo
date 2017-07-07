@@ -74,19 +74,25 @@ $breakpoint-lg-desktop: 1441px;
 }
 
 @mixin iphone-5-landscape {
-  @media only screen and (min-width: $breakpoint-mobile-portrait) and (max-device-width: 568px) and (orientation: landscape) {
+  @media only screen and (min-width: $breakpoint-mobile-portrait) and (max-width: 568px) and (orientation: landscape) {
     @content;
   }
 }
 
 @mixin iphone-5-portrait {
-  @media only screen and (max-width: $breakpoint-mobile-portrait) {
+  @media only screen and (max-width: $breakpoint-mobile-portrait) and (orientation: portrait) {
     @content;
   }
 }
 
 @mixin iphone-4-landscape {
 	@media only screen and (min-device-width: 320px) and (max-device-width: $breakpoint-mobile) and (orientation:landscape){
+		@content;
+	}
+}
+
+@mixin iphone-4-portrait {
+	@media only screen and (min-device-width: 320px) and (max-device-width: $breakpoint-mobile) and (orientation:portrait){
 		@content;
 	}
 }
@@ -103,26 +109,40 @@ $breakpoint-lg-desktop: 1441px;
   }
 }
 
+@mixin retina-devices {
+  @media screen and (-webkit-min-device-pixel-ratio:2) {
+    @content;
+  }
+}
+
 //CTA.
 @mixin default-cta {
 	color: $color-white;
 	background: $color-cta;
 	border: 1px solid #36B4A7;
-	border-radius: 100px;
+	@include border-radius(100px);
 	display: block;
 	font-family: HelveticaNeueBold;
 	height: 48px;
 	line-height: 53px;
 	margin: 15px auto;
+	max-width: $block-container;
 	width: 300px;
 
 	@include mobile-up {
 		font-size: $font-size-sm;
+		line-height: 45px;
 	}
 	
-	@include desktop-up {
-	  line-height: 45px;
-	}
+  @include retina-devices {
+    line-height: 53px;
+  }
+}
+
+@mixin border-radius ($value) {
+	-moz-border-radius: $value;
+	-webkit-border-radius: $value;
+	border-radius: $value;
 }
 
 @mixin clear {

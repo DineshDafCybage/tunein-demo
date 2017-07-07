@@ -5,8 +5,7 @@
   "main": "bundle.js",
   "scripts": {
     "start": "webpack --watch",
-    "build": "webpack -p",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -p"
   },
   "keywords": [
     "webpack",
@@ -27,13 +26,19 @@
     "browser-sync": "^2.14.0",
     "browser-sync-webpack-plugin": "^1.1.2",
     "clean-webpack-plugin": "^0.1.10",
+    "compression-webpack-plugin": "^0.4.0",
     "copy-webpack-plugin": "^3.0.1",
     "css-loader": "^0.23.1",
     "custom-event": "1.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
-    "html-loader": "^0.4.3",
+    "fs-extra": "^1.0.0",
+    "html-loader": "^0.4.5",
+    "html-minifier": "^3.5.2",
+    "html-minifier-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
+    "htmlclean": "^3.0.2",
+    "htmlclean-loader": "^1.0.6",
     "node-sass": "^3.8.0",
     "sass-loader": "^4.0.0",
     "style-loader": "^0.13.1",
@@ -41,10 +46,6 @@
     "webpack": "^1.13.2"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "font-awesome": "^4.6.3",
-    "jquery": "^3.1.0",
-    "resolve-url-loader": "^2.1.0",
-    "smooth-scroll-to": "^0.0.9"
+    "resolve-url-loader": "^2.1.0"
   }
 }
